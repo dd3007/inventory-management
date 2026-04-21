@@ -1,0 +1,14 @@
+import { defineConfig } from '@playwright/test';
+
+export default defineConfig({
+  testDir: '.',
+  timeout: 30000,
+  use: {
+    baseURL: 'http://localhost:3000',
+    headless: true,
+    screenshot: 'on',
+    video: 'off',
+    trace: 'off',
+  },
+  outputDir: '/tmp/restocking-test-screenshots',
+});
